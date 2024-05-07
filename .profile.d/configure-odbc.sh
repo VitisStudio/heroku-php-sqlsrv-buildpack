@@ -5,7 +5,7 @@ for f in ${HOME}/.apt/opt/microsoft/*; do
 	break;
 done
 
-for f in ${HOME}/.apt/usr/lib/*; do 
+for f in ${HOME}/.apt/usr/lib/*.so; do 
 	MS_ODBC_DRIVER_FILE=$(echo "$(basename $f)")
 	break;
 done
