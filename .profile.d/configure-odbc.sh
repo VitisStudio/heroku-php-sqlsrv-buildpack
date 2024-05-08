@@ -5,7 +5,7 @@ for f in ${HOME}/.apt/opt/microsoft/*; do
 	break;
 done
 
-for f in ${HOME}/.apt/usr/lib/*.so; do 
+for f in $(ls -1 ${HOME}/.apt/usr/lib | grep 'libmsodbcsql.*.so.*.');
 	MS_ODBC_DRIVER_FILE=$(echo "$(basename $f)")
 	break;
 done
